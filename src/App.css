@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+.chakra-stack{
+  overflow-x: clip;
+}
+
+.css-18j379d {
+    padding: 10vw;
+    text-align: justify;
+}
+
+#contactme-section {
+  align-self: center;
+}
+
+option {
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  .project-list {
+    display: flex;
+    grid-gap: var(--chakra-space-8);
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .project-list{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    grid-gap: var(--chakra-space-8);
+    max-width: 800px;
+  }
+}
