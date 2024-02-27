@@ -3,14 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
-  faLinkedin,
-  faMedium,
-  faStackOverflow,
+  faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack } from "@chakra-ui/react";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
-library.add(faGithub, faLinkedin, faMedium, faStackOverflow, faEnvelope)
+library.add(faGithub, faLinkedin, faEnvelope)
 
 const socials = [
   {
@@ -86,16 +84,13 @@ const Header = () => {
           alignItems="center"
         >
           <nav>
-            {/* Adding social media links based on the `socials` data */}
               <HStack spacing={8}>
                   {navItems}
               </HStack>
           </nav>
           <nav>
             <HStack spacing={8}>
-              {/* Adding links to Projects and Contact me section */}
               <a href="/#projects" value="projects" onClick={handleClick("projects")}>Projects</a>
-              <a href="/#contact-me" onClick={handleClick("contactme")}>Contact me</a>
             </HStack>
           </nav>
         </HStack>

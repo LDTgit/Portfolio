@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+This portfolio page is a single page that contains the following sections:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- A header with external links to social media accounts and an internal link to the projects section of the page
+- A landing section with an avatar picture and a short bio
+- A section to display your featured projects as cards in a grid fashion on a desktop and flex on a smaller device
 
-## Available Scripts
+I have used the open source library Chakra UI. The components from this library are  imported from the `@chakra-ui/react` package at the top of each corresponding file.
 
-In the project directory, you can run:
+# Steps
 
-### `npm start`
+Once you open the code, you need to install the *Chakra UI* and other referenced libraries by running the `npm install` command from the built-in terminal in the code lab. To toggle the built-in terminal, you need to click the View menu item, then choose the Terminal in the dropdown.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Once the terminal is open (visible), you can run the `npm install` command. This will install all the required missing dependencies.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### The `Header.js` file contains:
 
-### `npm test`
+a) An external social media links to the header on the left side of the page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I've used the `HStack` component to stack the links horizontally.
+Each social has a `a` tag with a `href` attribute pointing to the corresponding social media page. The `a` tag has as children a `FontAwesomeIcon` component.
 
-### `npm run build`
+The `FontAwesomeIcon` component takes 2 props:
+- `icon`: The `icon` prop from the `social` object.
+- `size`: The size of the icon of `2x` value.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+b) An internal link to the Projects section - a `a` tag that has as children the name of the section: "Projects".
+When clicking on the link, the url shows the corresponding section.
+Also, the click scrolls to the "Projects" section with a smooth animation.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### In the `LandingSection.js` file
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I used an avatar, a greeting and a brief role description.
 
-### `npm run eject`
+### The `ProjectsSection.js` component
+This component is implemented using the `Card` component that it uses to display information about each project it's not.
+The `ProjectsSection` component defines a `projects` array with the data for each project and that information is passed to each `Card` component as props.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### The `Card.js` component
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I uses the following components from Chakra UI:
+- VStack,
+- Image,
+- Heading,
+- Text,
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Header show/hide animation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I implemented a header show/hide animation depending on the scroll direction.
+The header slides up with some animation and is hidden when scrolling down the page.
+When scrolling up, the header slides down and is visible.
