@@ -1,50 +1,101 @@
-This portfolio page is a single page that contains the following sections:
+# Laura Portfolio
 
-- A header with external links to social media accounts and an internal link to the projects section of the page
-- A landing section with an avatar picture and a short bio
-- A section to display your featured projects as cards in a grid fashion on a desktop and flex on a smaller device
+A responsive personal portfolio website built with React and Chakra UI. It presents a short introduction, project highlights, social links, and a professional footer in a single-page layout.
 
-I have used the open source library Chakra UI. The components from this library are  imported from the `@chakra-ui/react` package at the top of each corresponding file.
+## Overview
 
-# Steps
+This project is a personal portfolio for Laura, designed to showcase:
 
-Once you open the code, you need to install the *Chakra UI* and other referenced libraries by running the `npm install` command from the built-in terminal in the code lab. To toggle the built-in terminal, you need to click the View menu item, then choose the Terminal in the dropdown.
+- a hero/landing section with profile image and bio
+- social media/contact links in the fixed header
+- a featured projects section with project cards
+- smooth in-page navigation to the projects area
+- a mobile-friendly responsive layout
+- a dark theme with modern UI styling
 
-Once the terminal is open (visible), you can run the `npm install` command. This will install all the required missing dependencies.
+## Features
 
-### The `Header.js` file contains:
+- Fixed header with quick access to social profiles and the Projects section
+- Smooth-scroll navigation using anchor links
+- Scroll-based header hide/show effect
+- Responsive project card grid for desktop and smaller screens
+- Accessibility-friendly links and semantic section structure
+- Deployment setup for GitHub Pages
 
-a) An external social media links to the header on the left side of the page.
+## Tech Stack
 
-I've used the `HStack` component to stack the links horizontally.
-Each social has a `a` tag with a `href` attribute pointing to the corresponding social media page. The `a` tag has as children a `FontAwesomeIcon` component.
+- React 18
+- Create React App
+- Chakra UI
+- Font Awesome icons
+- CSS for custom page styling
 
-The `FontAwesomeIcon` component takes 2 props:
-- `icon`: The `icon` prop from the `social` object.
-- `size`: The size of the icon of `2x` value.
+## Project Structure
 
-b) An internal link to the Projects section - a `a` tag that has as children the name of the section: "Projects".
-When clicking on the link, the url shows the corresponding section.
-Also, the click scrolls to the "Projects" section with a smooth animation.
+```text
+src/
+├── App.js
+├── App.css
+├── components/
+│   ├── Card.js
+│   ├── Footer.js
+│   ├── FullScreenSection.js
+│   ├── Header.js
+│   ├── LandingSection.js
+│   └── ProjectsSection.js
+├── images/
+├── index.css
+├── index.js
+└── setupTests.js
+```
 
-### In the `LandingSection.js` file
+## Local Development
 
-I used an avatar, a greeting and a brief role description.
+1. Install dependencies:
 
-### The `ProjectsSection.js` component
-This component is implemented using the `Card` component that it uses to display information about each project it's not.
-The `ProjectsSection` component defines a `projects` array with the data for each project and that information is passed to each `Card` component as props.
+```bash
+npm install
+```
 
-### The `Card.js` component
+2. Start the app in development mode:
 
-I uses the following components from Chakra UI:
-- VStack,
-- Image,
-- Heading,
-- Text,
+```bash
+npm start
+```
 
-### Header show/hide animation
+3. Open the app in your browser at:
 
-I implemented a header show/hide animation depending on the scroll direction.
-The header slides up with some animation and is hidden when scrolling down the page.
-When scrolling up, the header slides down and is visible.
+```text
+http://localhost:3000
+```
+
+## Production Build
+
+To generate a production build:
+
+```bash
+npm run build
+```
+
+## Deployment
+
+This app is configured for GitHub Pages deployment.
+
+To publish the build:
+
+```bash
+npm run deploy
+```
+
+The project includes the required `homepage` field and deploy script in `package.json`.
+
+## Notes
+
+The portfolio content is currently tailored to Laura's profile and includes project examples such as:
+
+- Online Scheduling Tool
+- Commerce
+- Network
+- Restaurant website
+
+Each card links to its corresponding GitHub repository so visitors can review the source code for individual projects.

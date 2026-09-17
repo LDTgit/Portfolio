@@ -1,0 +1,23 @@
+.certifications-section{
+    background-color: #fddc8d;
+    display: flex;
+    align-items: flex-start;
+    padding: 8rem;
+}
+
+#certifications-section {
+    color: black;
+}
+
+.certifications-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+.certifications-list {
+    grid-template-columns: 1fr;
+}
+}

@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack } from "@chakra-ui/react";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import "../styles/Header.css";
 
 library.add(faGithub, faLinkedin, faEnvelope)
 
@@ -31,6 +32,39 @@ const navItems = socials.map((item, index )=> {
 })
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const scrollState = useRef();
+  const navRef = useRef(null);
+  const burgerRef = useRef(null);
+
+  useEffect(() => {
+
+    const handleOutsideInteraction = (event) => {
+      // Close when clicking outside the nav
+      const isClickInsideNav = navRef.current && navRef.current.contains(event.target);
+      const isClickInsideBurger = burgerRef.current && burgerRef.current.contains(event.target);
+      if (isOpen && !isClickInsideNav && !isClickInsideBurger) {
+        setIsOpen(false);
+      }
+    };
+
+    const handleScroll = () => {
+      if (isOpen) setIsOpen(false);
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleOutsideInteraction);
+      window.addEventListener('scroll', handleScroll, { passive: true });
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideInteraction);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isOpen]);
+
+
+
   const handleClick = (anchor) => () => {
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
@@ -42,8 +76,7 @@ const Header = () => {
     }
   };
 
-  const scrollState = useRef();
-  let lastScrollPosition = 0;
+ let lastScrollPosition = useRef(0);
   let navIsShowing = true;
 
   useEffect(() => {
@@ -82,14 +115,30 @@ const Header = () => {
           py={4}
           justifyContent="space-between"
           alignItems="center"
+          w="full"
+          className="header-content"
         >
           <nav>
               <HStack spacing={8}>
                   {navItems}
               </HStack>
           </nav>
-          <nav>
+          {/* Buton Burger pentru mobil */}
+          <button
+            ref={burgerRef}
+            className={`burger-btn ${isOpen ? 'open' : ''}`}
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          {/* Navigatia cu clasa dinamica */}
+          <nav ref={navRef} className={`nav-links ${isOpen ? 'open' : ''}`}>
             <HStack spacing={8}>
+              <a href="#certifications" value="certifications" onClick={handleClick("certifications")}>Certifications</a>
               <a href="#projects" value="projects" onClick={handleClick("projects")}>Projects</a>
             </HStack>
           </nav>

@@ -1,0 +1,20 @@
+.landing-section {
+    margin-top: 4rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #2A4365;
+    min-height: 100vh;
+}
+
+.bio1 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+}
+
+.landing-avatar {
+    border-radius: 50%;
+    width: 30vw;
+    max-width: 200px;
+    margin-bottom: 1rem;
+}
