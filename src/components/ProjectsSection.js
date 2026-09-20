@@ -22,6 +22,14 @@ const projects = [
     url: "https://github.com/LDTgit/Fraud_Detection",
   },
   {
+    title: "Law Firm Website",
+    techStack: ["React", "Chakra UI", "JavaScript"],
+    description:
+      "A modern landing page for a legal services brand, built to present a law firm’s expertise, professional team, legal services, and contact information, built with React and Chakra UI. The website features a clean and modern design, providing an engaging user experience.",
+    getImageSrc: () => require("../images/LawFirm.jpeg"),
+    url: "https://github.com/LDTgit/just-web",
+  },
+  {
     title: "Educational Desktop Application",
     techStack: ["Java", "JavaFX", "Maven", "API Integration"],
     description:
@@ -88,6 +96,7 @@ const ProjectsSection = () => {
         <Card
           key={project.title}
           title={project.title}
+          techStack={project.techStack}
           description={project.description}
           imageSrc={project.getImageSrc()}
           url={project.url}
