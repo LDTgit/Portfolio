@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.a8fef17e.css",
-    "main.js": "/Portfolio/static/js/main.6fd096c7.js",
+    "main.css": "/Portfolio/static/css/main.47f141ac.css",
+    "main.js": "/Portfolio/static/js/main.cbb78b13.js",
     "static/js/787.daffe1f0.chunk.js": "/Portfolio/static/js/787.daffe1f0.chunk.js",
     "static/media/LawFirm.jpeg": "/Portfolio/static/media/LawFirm.e00c2ca155dcca20c937.jpeg",
     "static/media/commerce.jpg": "/Portfolio/static/media/commerce.8203f154dc87cbace179.jpg",
@@ -14,12 +14,12 @@
     "static/media/Fraud.jpg": "/Portfolio/static/media/Fraud.ed513c328d11e89db39e.jpg",
     "static/media/Laura3.jpg": "/Portfolio/static/media/Laura3.2aa368643583791d332d.jpg",
     "index.html": "/Portfolio/index.html",
-    "main.a8fef17e.css.map": "/Portfolio/static/css/main.a8fef17e.css.map",
-    "main.6fd096c7.js.map": "/Portfolio/static/js/main.6fd096c7.js.map",
+    "main.47f141ac.css.map": "/Portfolio/static/css/main.47f141ac.css.map",
+    "main.cbb78b13.js.map": "/Portfolio/static/js/main.cbb78b13.js.map",
     "787.daffe1f0.chunk.js.map": "/Portfolio/static/js/787.daffe1f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8fef17e.css",
-    "static/js/main.6fd096c7.js"
+    "static/css/main.47f141ac.css",
+    "static/js/main.cbb78b13.js"
   ]
 }
