@@ -7,3 +7,10 @@
     margin: 0 auto;
     padding: 1em !important;
 }
+
+@media (max-width: 400px) {
+    .footer-content {
+        flex-direction: column;
+        height: 100% !important;
+    }
+}
