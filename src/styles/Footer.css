@@ -1,0 +1,9 @@
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+    padding: 1em !important;
+}

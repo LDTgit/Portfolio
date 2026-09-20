@@ -12,6 +12,7 @@ const LandingSection = () => (
   <FullScreenSection
     isDarkBackground
     className="landing-section"
+    id="home"
   >
     <VStack>
       <Image size="2xl" name="Laura" src={lauraImage} className="landing-avatar"></Image>

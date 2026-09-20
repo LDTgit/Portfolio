@@ -51,7 +51,7 @@ const CertificationsSection = () => {
       p={8}
       spacing={8}
     >
-      <Heading as="h1" id="certifications-section">
+      <Heading as="h1" id="certifications">
         Certifications & Badges
       </Heading>
 

@@ -6,6 +6,7 @@ import {
   faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack } from "@chakra-ui/react";
+import { HashLink } from 'react-router-hash-link';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import "../styles/Header.css";
 
@@ -119,9 +120,9 @@ const Header = () => {
           className="header-content"
         >
           <nav>
-              <HStack spacing={8}>
-                  {navItems}
-              </HStack>
+            <section>
+              <HashLink smooth to="/#home">Home</HashLink>
+            </section>
           </nav>
           {/* Buton Burger pentru mobil */}
           <button
@@ -138,8 +139,8 @@ const Header = () => {
           {/* Navigatia cu clasa dinamica */}
           <nav ref={navRef} className={`nav-links ${isOpen ? 'open' : ''}`}>
             <HStack spacing={8}>
-              <a href="#certifications" value="certifications" onClick={handleClick("certifications")}>Certifications</a>
-              <a href="#projects" value="projects" onClick={handleClick("projects")}>Projects</a>
+              <HashLink smooth to="/#certifications" >Certifications</HashLink>
+              <HashLink smooth to="/#projects" >Projects</HashLink>
             </HStack>
           </nav>
         </HStack>
