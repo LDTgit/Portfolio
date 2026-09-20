@@ -120,9 +120,9 @@ const Header = () => {
           className="header-content"
         >
           <nav>
-            <section>
-              <HashLink smooth to="/#home">Home</HashLink>
-            </section>
+              <HStack spacing={8}>
+                  {navItems}
+              </HStack>
           </nav>
           {/* Buton Burger pentru mobil */}
           <button
@@ -139,6 +139,7 @@ const Header = () => {
           {/* Navigatia cu clasa dinamica */}
           <nav ref={navRef} className={`nav-links ${isOpen ? 'open' : ''}`}>
             <HStack spacing={8}>
+              <HashLink smooth to="/#home">Home</HashLink>
               <HashLink smooth to="/#certifications" >Certifications</HashLink>
               <HashLink smooth to="/#projects" >Projects</HashLink>
             </HStack>
