@@ -47,7 +47,7 @@ const projects = [
   },
   {
     title: "Online Scheduling Tool",
-    techStack: ["JavaScript", "Django"],
+    techStack: ["Python", "Django"],
     description:
       "Handy scheduling tool designed specifically for veterinary practices, powered by React.js! This project is a scheduling application tailored for the internal use of veterinary clinics. Developed with JavaScript and Django, this app streamlines appointment management within the clinic. Employees can efficiently schedule and organize appointments, optimizing the workflow for enhanced veterinary care.",
     getImageSrc: () => require("../images/photo1.jpg"),
@@ -55,7 +55,7 @@ const projects = [
   },
   {
     title: "Commerce",
-    techStack: ["JavaScript", "React"],
+    techStack: ["Python", "Django"],
     description:
       "An online commerce platform, resembling eBay, that allows users to connect and trade. This project, developed using React, presents an intuitive interface for users to buy and sell products securely. The incorporation of HTML, CSS, and JavaScript ensures a seamless and visually appealing e-commerce experience.",
     getImageSrc: () => require("../images/commerce.jpg"),
@@ -71,7 +71,7 @@ const projects = [
   },
   {
     title: "Restaurant website",
-    techStack: ["HTML", "CSS", "JavaScript"],
+    techStack: ["HTML", "CSS", "JavaScript", "React"],
     description:
       "A website for a small restaurant, developed using HTML, CSS, and JavaScript. This user-friendly website not only provides essential information about the restaurant but also offers an immersive visual experience.",
     getImageSrc: () => require("../images/restaurant.jpg"),
